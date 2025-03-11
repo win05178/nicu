@@ -1,7 +1,18 @@
-[{
-    "id": 1,
-    "name": "Acetaminophen",
-    "page": "acetaminophen.html",
-    "incompatibility":["Diazepam"]
-}
+[
+    {
+        "id": 1,
+        "name": "Acetaminophen",
+        "page": "acetaminophen.html",
+        "incompatibility": [
+            "Diazepam"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Acetaminophen2",
+        "page": "acetaminophen.html",
+        "incompatibility": [
+            "Diazepam"
+        ]
+    }
 ]
