@@ -7,7 +7,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <style>
-        .body,.card-body {
+        .body,.card-body,.card {
             background-color: #fef7ff;
             font-family: Arial, sans-serif;
         }
@@ -44,8 +44,18 @@
                 font-size: 1.2em;
             }
         }
+        .card {
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+        }
         .card-header {
             cursor: pointer;
+            width: 90%;
+            border-top-right-radius: 40px !important;
+            border-bottom-right-radius: 40px !important;
+            margin-left: 0;
+            border: none; /* Remove border */
         }
         .card-header .btn-link {
             width: 100%;
@@ -60,12 +70,12 @@
             text-decoration: none;
         }
         .card-header .btn-link:after {
-            content: '\25B2'; /* Up arrow */
+            content: '\02C4'; /* Up arrow */
             font-size: 1.2em;
             transition: transform 0.3s;
         }
         .card-header .btn-link.collapsed:after {
-            transform: rotate(180deg);
+            content: '\02C5'; /* Down arrow */
         }
     </style>
     <body class="body">
