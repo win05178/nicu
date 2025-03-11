@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <style>
+        .body {
+            background-color: #fef7ff;
+            font-family: Arial, sans-serif;
+        }
+        .background-strip {
+            background-color: #fffcc4;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .centered-text {
+            color: #A16AE8;
+            text-align: center;
+            font-size: 2em;
+        }
+        .input-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input-container input {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+    <body class="body">
+        <div class="background-strip">
+            <div class="centered-text">Acetaminophen</div>
+        </div>
+        <div class="input-container">
+            Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="200" id="bodyWeightInput"> Kg.
+        </div>
+        <script>
+            document.getElementById('bodyWeightInput').addEventListener('input', function() {
+                var value = this.value;
+                if (value < 0 || value > 100) {
+                    alert('Please enter a value between 0 and 100.');
+                    this.value = '';
+                }
+            });
+        </script>
+    </body>
+</html>
