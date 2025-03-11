@@ -1,11 +1,229 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <style>
-        .body {
+        .body,.card-body {
             background-color: #fef7ff;
             font-family: Arial, sans-serif;
         }
+        .background-strip {
+            background-color: #fffcc4;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .centered-text {
+            color: #A16AE8;
+            text-align: center;
+            font-size: 2em;
+        }
+        .input-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input-container input {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media (max-width: 576px) {
+            .modal-dialog {
+                max-width: 90%;
+                margin: 1.75rem auto;
+            }
+            .modal-content {
+                padding: 10px;
+            }
+            .modal-header, .modal-footer {
+                padding: 10px;
+            }
+            .modal-title {
+                font-size: 1.2em;
+            }
+        }
+        .card-header {
+            cursor: pointer;
+        }
+        .card-header .btn-link {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+        }
+        .card-header .btn-link:hover {
+            text-decoration: none;
+        }
+        .card-header .btn-link:after {
+            content: '\25B2'; /* Up arrow */
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        .card-header .btn-link.collapsed:after {
+            transform: rotate(180deg);
+        }
     </style>
+    <body class="body">
+        <div class="background-strip">
+            <div class="centered-text">Acetaminophen</div>
+        </div>
+        <div class="input-container centered-text">
+            Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="200" id="bodyWeightInput"> Kg.
+        </div>
+
+        <div class="accordion" id="accordionExample" style="margin-top: 20px;">
+            <div class="card">
+                <div class="card-header" id="headingOne" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Dose
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                    <div class="card-body">
+                        <!-- Content for Dose -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Administration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        <!-- Content for Administration -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Final concentration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                    <div class="card-body">
+                        <!-- Content for Final concentration -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Preparation
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Preparation -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Monitoring
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Monitoring -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Adverse effects
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Adverse effects -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Solution incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Solution incompatibility -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Drug incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Drug incompatibility -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="alertModalLabel">Invalid Input</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Modal message will be set dynamically -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showModal(message) {
+                document.getElementById('modalBody').innerText = message;
+                $('#alertModal').modal('show');
+            }
+
+            document.getElementById('bodyWeightInput').addEventListener('input', function() {
+                var value = this.value;
+                if (value < 0 || value > 200) {
+                    showModal('Please enter a value between 0 and 200.');
+                    this.value = '';
+                }
+            });
+        </script>
+    </body>
 </html>
