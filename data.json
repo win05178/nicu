@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Acetaminophen",
-        "page": "acetaminophen.html",
+        "page": "https://win05178.github.io/nicu/index.html",
         "incompatibility": [
             "Diazepam"
         ]
