@@ -9,10 +9,26 @@
     },
     {
         "id": 2,
-        "name": "Acetaminophen2",
+        "name": "Diazepam",
         "page": "acetaminophen.html",
         "incompatibility": [
-            "Diazepam"
+            "Acetaminophen"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "AB",
+        "page": "acetaminophen.html",
+        "incompatibility": [
+            "Acetaminophen"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "BC",
+        "page": "acetaminophen.html",
+        "incompatibility": [
+            "AB", "Acetaminophen"
         ]
     }
 ]
