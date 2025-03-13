@@ -84,6 +84,12 @@
             font-size: 1.1em;
             padding-left: 10px; /* Add padding between radio button and label */
         }
+        .form-group {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
         @media (max-width: 576px) {
             .form-check-label {
                 font-size: 1em;
@@ -114,99 +120,105 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="card-body">
                         <!-- Content for Dose -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="doseOptions" id="feverGestational" value="feverGestational">
-                            <label class="form-check-label" for="feverGestational">
-                                Fever (Gestational age ≥ 32 weeks)
-                                <br>
-                                <span style="color:red">*</span>Intravenous  12.5 mg/kg/dose  Interval: every 6 hours
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="doseOptions" id="feverPain" value="feverPain">
-                            <label class="form-check-label" for="feverPain">
-                                Fever/Pain
-                            </label>
-                        </div>
-                        <div id="feverPainOptions" style="display: none; margin-left: 20px;">
+                        <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="feverPainOptions" id="oral" value="oral">
-                                <label class="form-check-label" for="oral">
-                                    Oral
+                                <input class="form-check-input" type="radio" name="doseOptions" id="feverGestational" value="feverGestational">
+                                <label class="form-check-label" for="feverGestational">
+                                    Fever (Gestational age ≥ 32 weeks)
+                                    <br>
+                                    <span style="color:red">*</span>Intravenous  12.5 mg/kg/dose  Interval: every 6 hours
                                 </label>
                             </div>
-                            <div id="oralOptions" style="display: none; margin-left: 20px;">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="oralOptions" id="gestationalLess32" value="gestationalLess32">
-                                    <label class="form-check-label" for="gestationalLess32">
-                                        Gestational age < 32 weeks<br>
-                                        <span style="color:red">*</span>20-25 mg/kg/dose  then  
-                                        12-15 mg/kg/dose  Interval: every 12 hours
-                               
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="oralOptions" id="gestationalMore32" value="gestationalMore32">
-                                    <label class="form-check-label" for="gestationalMore32">
-                                        Gestational age ≥ 32 weeks<br>
-                                        <span style="color:red">*</span>20-25 mg/kg/dose  then  
-                                        12-15 mg/kg/dose  Interval: every 8 hours
-                               
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="oralOptions" id="termInfants" value="termInfants">
-                                    <label class="form-check-label" for="termInfants">
-                                        Term infants<br>
-                                        <span style="color:red">*</span>20-25 mg/kg/dose  then  
-                                        12-15 mg/kg/dose  Interval: every 6 hours
-                               
-                                    </label>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="feverPainOptions" id="rectalFeverPain" value="rectalFeverPain">
-                                <label class="form-check-label" for="rectalFeverPain">
-                                    Rectal
+                                <input class="form-check-input" type="radio" name="doseOptions" id="feverPain" value="feverPain">
+                                <label class="form-check-label" for="feverPain">
+                                    Fever/Pain
                                 </label>
                             </div>
-                            <div id="rectalOptions" style="display: none; margin-left: 20px;">
+                            <div id="feverPainOptions" style="display: none; margin-left: 20px;">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="rectalOptions" id="gestationalLess32Rectal" value="gestationalLess32Rectal">
-                                    <label class="form-check-label" for="gestationalLess32Rectal">
-                                        Gestational age < 32 weeks<br>
-                                        <span style="color:red">*</span>30 mg/kg/dose  then  
-                                        12-18 mg/kg/dose  Interval: every 12 hours
-                               
+                                    <input class="form-check-input" type="radio" name="feverPainOptions" id="oral" value="oral">
+                                    <label class="form-check-label" for="oral">
+                                        Oral
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="rectalOptions" id="gestationalMore32Rectal" value="gestationalMore32Rectal">
-                                    <label class="form-check-label" for="gestationalMore32Rectal">
-                                        Gestational age ≥ 32 weeks<br>
-                                        <span style="color:red">*</span>30 mg/kg/dose  then  
-                                        12-18 mg/kg/dose  Interval: every 8 hours
-                               
-                                    </label>
+                                <div id="oralOptions" style="display: none; margin-left: 20px;">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="oralOptions" id="gestationalLess32" value="gestationalLess32">
+                                        <label class="form-check-label" for="gestationalLess32">
+                                            Gestational age < 32 weeks<br>
+                                            <span style="color:red">*</span>20-25 mg/kg/dose  then  
+                                            12-15 mg/kg/dose  Interval: every 12 hours
+                                   
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="oralOptions" id="gestationalMore32" value="gestationalMore32">
+                                        <label class="form-check-label" for="gestationalMore32">
+                                            Gestational age ≥ 32 weeks<br>
+                                            <span style="color:red">*</span>20-25 mg/kg/dose  then  
+                                            12-15 mg/kg/dose  Interval: every 8 hours
+                                   
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="oralOptions" id="termInfants" value="termInfants">
+                                        <label class="form-check-label" for="termInfants">
+                                            Term infants<br>
+                                            <span style="color:red">*</span>20-25 mg/kg/dose  then  
+                                            12-15 mg/kg/dose  Interval: every 6 hours
+                                   
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="rectalOptions" id="termInfantsRectal" value="termInfantsRectal">
-                                    <label class="form-check-label" for="termInfantsRectal">
-                                        Term infants<br>
-                                        <span style="color:red">*</span>30 mg/kg/dose  then  
-                                        12-18 mg/kg/dose  Interval: every 6 hours
-                               
+                                    <input class="form-check-input" type="radio" name="feverPainOptions" id="rectalFeverPain" value="rectalFeverPain">
+                                    <label class="form-check-label" for="rectalFeverPain">
+                                        Rectal
                                     </label>
+                                </div>
+                                <div id="rectalOptions" style="display: none; margin-left: 20px;">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rectalOptions" id="gestationalLess32Rectal" value="gestationalLess32Rectal">
+                                        <label class="form-check-label" for="gestationalLess32Rectal">
+                                            Gestational age < 32 weeks<br>
+                                            <span style="color:red">*</span>30 mg/kg/dose  then  
+                                            12-18 mg/kg/dose  Interval: every 12 hours
+                                   
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rectalOptions" id="gestationalMore32Rectal" value="gestationalMore32Rectal">
+                                        <label class="form-check-label" for="gestationalMore32Rectal">
+                                            Gestational age ≥ 32 weeks<br>
+                                            <span style="color:red">*</span>30 mg/kg/dose  then  
+                                            12-18 mg/kg/dose  Interval: every 8 hours
+                                   
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rectalOptions" id="termInfantsRectal" value="termInfantsRectal">
+                                        <label class="form-check-label" for="termInfantsRectal">
+                                            Term infants<br>
+                                            <span style="color:red">*</span>30 mg/kg/dose  then  
+                                            12-18 mg/kg/dose  Interval: every 6 hours
+                                   
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="doseOptions" id="rectal" value="rectal">
-                            <label class="form-check-label" for="rectal">
-                                Closure of Patent Ductus Arteriosus
-                                <br>
-                                <span style="color:red">*</span>Oral  15 mg/kg/dose Interval: every 6 hours for 3 days
-                            </label>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="doseOptions" id="rectal" value="rectal">
+                                <label class="form-check-label" for="rectal">
+                                    Closure of Patent Ductus Arteriosus
+                                    <br>
+                                    <span style="color:red">*</span>Oral  15 mg/kg/dose Interval: every 6 hours for 3 days
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
