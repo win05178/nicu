@@ -40,6 +40,14 @@
         ]
     },
     {
+        "id": 6,
+        "name": "Albuterol",
+        "page": "https://win05178.github.io/nicu/albuterol.html",
+        "incompatibility": [
+            
+        ]
+    },
+    {
         "id": 2,
         "name": "Diazepam",
         "page": "acetaminophen.html",
