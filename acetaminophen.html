@@ -119,106 +119,47 @@
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="card-body">
-                        <!-- Content for Dose -->
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="doseOptions" id="feverGestational" value="feverGestational">
-                                <label class="form-check-label" for="feverGestational">
-                                    Fever (Gestational age ≥ 32 weeks)
-                                    <br>
-                                    <span style="color:red">*</span>Intravenous  12.5 mg/kg/dose  Interval: every 6 hours
-                                </label>
-                            </div>
+                        <div class="input-container centered-text">
+                            Dose <input type="number" class="form-control d-inline w-auto" value="12" placeholder="0" min="0" max="200" id="dose"> Mg.
                         </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="doseOptions" id="feverPain" value="feverPain">
-                                <label class="form-check-label" for="feverPain">
-                                    Fever/Pain
-                                </label>
-                            </div>
-                            <div id="feverPainOptions" style="display: none; margin-left: 20px;">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="feverPainOptions" id="oral" value="oral">
-                                    <label class="form-check-label" for="oral">
-                                        Oral
-                                    </label>
-                                </div>
-                                <div id="oralOptions" style="display: none; margin-left: 20px;">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="oralOptions" id="gestationalLess32" value="gestationalLess32">
-                                        <label class="form-check-label" for="gestationalLess32">
-                                            Gestational age < 32 weeks<br>
-                                            <span style="color:red">*</span>20-25 mg/kg/dose  then  
-                                            12-15 mg/kg/dose  Interval: every 12 hours
-                                   
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="oralOptions" id="gestationalMore32" value="gestationalMore32">
-                                        <label class="form-check-label" for="gestationalMore32">
-                                            Gestational age ≥ 32 weeks<br>
-                                            <span style="color:red">*</span>20-25 mg/kg/dose  then  
-                                            12-15 mg/kg/dose  Interval: every 8 hours
-                                   
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="oralOptions" id="termInfants" value="termInfants">
-                                        <label class="form-check-label" for="termInfants">
-                                            Term infants<br>
-                                            <span style="color:red">*</span>20-25 mg/kg/dose  then  
-                                            12-15 mg/kg/dose  Interval: every 6 hours
-                                   
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="feverPainOptions" id="rectalFeverPain" value="rectalFeverPain">
-                                    <label class="form-check-label" for="rectalFeverPain">
-                                        Rectal
-                                    </label>
-                                </div>
-                                <div id="rectalOptions" style="display: none; margin-left: 20px;">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rectalOptions" id="gestationalLess32Rectal" value="gestationalLess32Rectal">
-                                        <label class="form-check-label" for="gestationalLess32Rectal">
-                                            Gestational age < 32 weeks<br>
-                                            <span style="color:red">*</span>30 mg/kg/dose  then  
-                                            12-18 mg/kg/dose  Interval: every 12 hours
-                                   
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rectalOptions" id="gestationalMore32Rectal" value="gestationalMore32Rectal">
-                                        <label class="form-check-label" for="gestationalMore32Rectal">
-                                            Gestational age ≥ 32 weeks<br>
-                                            <span style="color:red">*</span>30 mg/kg/dose  then  
-                                            12-18 mg/kg/dose  Interval: every 8 hours
-                                   
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rectalOptions" id="termInfantsRectal" value="termInfantsRectal">
-                                        <label class="form-check-label" for="termInfantsRectal">
-                                            Term infants<br>
-                                            <span style="color:red">*</span>30 mg/kg/dose  then  
-                                            12-18 mg/kg/dose  Interval: every 6 hours
-                                   
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="doseOptions" id="rectal" value="rectal">
-                                <label class="form-check-label" for="rectal">
-                                    Closure of Patent Ductus Arteriosus
-                                    <br>
-                                    <span style="color:red">*</span>Oral  15 mg/kg/dose Interval: every 6 hours for 3 days
-                                </label>
-                            </div>
+                        <hr>
+                        <div>
+                            <ul>
+                                <li><strong>Fever (Gestational age ≥ 32 weeks)</strong>
+                                    <ul>
+                                        <li>Intravenous: 12.5 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <hr>
+                            <ul>
+                                <li><strong>Fever/Pain</strong>
+                                    <ul>
+                                        <li><strong>Oral</strong>
+                                            <ul>
+                                                <li>Gestational age &lt; 32 weeks: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 12 hours</li>
+                                                <li>Gestational age ≥ 32 weeks: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 8 hours</li>
+                                                <li>Term infants: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Rectal</strong>
+                                            <ul>
+                                                <li>Gestational age &lt; 32 weeks: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 12 hours</li>
+                                                <li>Gestational age ≥ 32 weeks: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 8 hours</li>
+                                                <li>Term infants: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <hr>
+                            <ul>
+                                <li><strong>Closure of Patent Ductus Arteriosus</strong>
+                                    <ul>
+                                        <li>Oral: 15 mg/kg/dose, <strong>Interval:</strong> every 6 hours for 3 days</li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -250,6 +191,9 @@
                     <div class="card-body">
                         <!-- Content for Final concentration -->
                         10 mg/ml (intravenous)
+                        <div>
+                        <span id="final"></span>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -265,6 +209,10 @@
                     <div class="card-body">
                         Intravenous. Do not refrigerate or freeze. Vial is for single use only and should be used within 6 hours of opening
                         <!-- Content for Preparation -->
+                         <div>
+                            <span id="prepare"></span>
+                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -354,6 +302,8 @@
         </div>
 
         <script>
+            var prepare = "1000 mg  ในสารน้ำ 100 ml  ปริมาณยาที่ใช้ ( <strong style='color: red;'>{c}</strong> mg. X 100) ÷ 1000 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var finalA = "สูตร <strong style='color: red;'>{c}</strong> mg.  ÷ 10 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
             function showModal(message) {
                 document.getElementById('modalBody').innerText = message;
                 $('#alertModal').modal('show');
@@ -364,34 +314,35 @@
                 if (value < 0 || value > 200) {
                     showModal('Please enter a value between 0 and 200.');
                     this.value = '';
+                    return;
                 }
+                cal();
             });
+            document.getElementById('dose').addEventListener('change', function() {
+                var value = this.value;
+                if(value==null || value=="")
+                    return;
+                if (value < 12 || value > 30) {
+                    showModal('Please enter a value between 12 and 30.');
+                    this.value = '';
+                    return;
+                }
+                cal();
+            });
+            function cal(){
+               var body= $("#bodyWeightInput").val();
+               var dose= $("#dose").val();
+               var d = dose*body;
+               var p = (dose*body*100)/1000;
+               var f = (dose*body/10);
+               var p1 = prepare.replace("{c}",d).replace("{r}",p);
+               var f1 = finalA.replace("{c}",d).replace("{r}",f);
+                $("#prepare").html(p1);
+                $("#final").html(f1);
 
-            document.getElementById('feverPain').addEventListener('change', function() {
-                document.getElementById('feverPainOptions').style.display = 'block';
-            });
+            }
 
-            document.getElementById('feverGestational').addEventListener('change', function() {
-                document.getElementById('feverPainOptions').style.display = 'none';
-                document.getElementById('oralOptions').style.display = 'none';
-                document.getElementById('rectalOptions').style.display = 'none';
-            });
-
-            document.getElementById('rectal').addEventListener('change', function() {
-                document.getElementById('feverPainOptions').style.display = 'none';
-                document.getElementById('oralOptions').style.display = 'none';
-                document.getElementById('rectalOptions').style.display = 'none';
-            });
-
-            document.getElementById('oral').addEventListener('change', function() {
-                document.getElementById('oralOptions').style.display = 'block';
-                document.getElementById('rectalOptions').style.display = 'none';
-            });
-
-            document.getElementById('rectalFeverPain').addEventListener('change', function() {
-                document.getElementById('oralOptions').style.display = 'none';
-                document.getElementById('rectalOptions').style.display = 'block';
-            });
+            
         </script>
     </body>
 </html>
