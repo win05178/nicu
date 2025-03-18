@@ -296,8 +296,8 @@
         </div>
 
         <script>
-            var prepare1 = "สูตร  <strong style='color: red;'>{c}</strong> mg  ผสมในสารน้ำ 10 ml   ปริมาณยาที่ใช้ (<strong style='color: red;'>{c}</strong> mg. X 10) ÷ 500 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
-            var prepare2 = "สูตร  <strong style='color: red;'>{c}</strong> mg  ผสมในสารน้ำ 5 ml   ปริมาณยาที่ใช้ (<strong style='color: red;'>{c}</strong> mg. X 5) ÷ 200 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare1 = "สูตร  500 mg  ผสมในสารน้ำ 10 ml   ปริมาณยาที่ใช้ (<strong style='color: red;'>{c}</strong> mg. X 10) ÷ 500 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare2 = "สูตร  200 mg  ผสมในสารน้ำ 5 ml   ปริมาณยาที่ใช้ (<strong style='color: red;'>{c}</strong> mg. X 5) ÷ 200 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
             var finalA = "สูตร  <strong style='color: red;'>{c}</strong> mg.  ÷ 7 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
 
             function formatNumber(num) {
@@ -311,8 +311,8 @@
 
             document.getElementById('bodyWeightInput').addEventListener('input', function() {
                 var value = this.value;
-                if (value < 0 || value > 200) {
-                    showModal('Please enter a value between 0 and 200.');
+                if (value < 0 || value > 300) {
+                    showModal('Please enter a value between 0 and 300.');
                     this.value = '';
                     return;
                 }
