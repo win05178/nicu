@@ -9,6 +9,14 @@
     },
     {
         "id": 2,
+        "name": "Acyclovir",
+        "page": "https://win05178.github.io/nicu/acyclovir.html",
+        "incompatibility": [
+            "Fat emulsion", "aztreonam", "caffeine citrate", "caspofungin", "cefepime", "dobutamine", "dopamine", "meropenem", "piperacillin-tazobactam"
+        ]
+    },
+    {
+        "id": 2,
         "name": "Diazepam",
         "page": "acetaminophen.html",
         "incompatibility": [

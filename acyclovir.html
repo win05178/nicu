@@ -99,10 +99,16 @@
                 height: 1.5em;
             }
         }
+        thead tr th {
+            text-align: center;
+        }
+        tbody tr td {
+            text-align: center;
+        }
     </style>
     <body class="body">
         <div class="background-strip">
-            <div class="centered-text">Acetaminophen</div>
+            <div class="centered-text">Acyclovir</div>
         </div>
         <div class="input-container centered-text">
             Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="200" id="bodyWeightInput"> Kg.
@@ -120,50 +126,27 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="card-body">
                         <div class="input-container centered-text">
-                            Dose <input type="number" class="form-control d-inline w-auto" value="12" placeholder="0" min="0" max="200" id="dose"> Mg.
+                            Dose <input type="number" class="form-control d-inline w-auto" value="10" placeholder="0" min="0" max="200" id="dose"> Mg.
                         </div>
                         <hr>
-                        <div>
-                            <ul>
-                                <li><strong>Fever (Gestational age ≥ 32 weeks)</strong>
-                                    <ul>
-                                        <li>Intravenous: 12.5 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr>
-                            <ul>
-                                <li><strong>Fever/Pain</strong>
-                                    <ul>
-                                        <li><strong>Oral</strong>
-                                            <ul>
-                                                <li>Gestational age &lt; 32 weeks: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 12 hours</li>
-                                                <li>Gestational age ≥ 32 weeks: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 8 hours</li>
-                                                <li>Term infants: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Rectal</strong>
-                                            <ul>
-                                                <li>Gestational age &lt; 32 weeks: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 12 hours</li>
-                                                <li>Gestational age ≥ 32 weeks: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 8 hours</li>
-                                                <li>Term infants: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr>
-                            <ul>
-                                <li><strong>Closure of Patent Ductus Arteriosus</strong>
-                                    <ul>
-                                        <li>Oral: 15 mg/kg/dose, <strong>Interval:</strong> every 6 hours for 3 days</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li><strong>Herpes Simplex Virus Infection</strong>
+                                <ul>
+                                    <li>PMA < 30 weeks: 20 mg/kg/dose <strong>Interval:</strong> every 8 hours</li>
+                                    <li>PMA ≥ 30 weeks: 20 mg/kg/dose <strong>Interval:</strong> every 8 hours</li>
+                                </ul>
+                                <p>[Treat localized herpes simplex disease for 14 days and disseminated or CNS disease for 21 days. For CNS disease, continue IV therapy for another 7 days, when repeat DNA polymerase chain reaction (cerebrospinal fluid herpes simplex virus) is positive after 19 to 21 days of acyclovir therapy. Continue IV therapy until PCR is negative. The duration for preemptive therapy without proven disease is 10 days.]</p>
+                            </li>
+                            <li><strong>Varicella-Zoster Virus Infection</strong>: 10 to 15 mg/kg/dose <strong>Interval:</strong> every 8 hours [for 5 to 10 days]
+                                <ul>
+                                    <li>Preterm infant GA < 33 weeks: <strong>Interval:</strong> every 12 hours</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+           
             <div class="card">
                 <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
                     <h2 class="mb-0">
@@ -174,8 +157,10 @@
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
                     <div class="card-body">
-                        <!-- Content for Administration -->
-                        Administer intravenous over 15 minutes
+                        <ul>
+                            <li><strong>Intravenous route:</strong> IV infusion over 1 hour</li>
+                            <li><strong>Oral route:</strong> take with or without food; for suspension, shake well before measuring each dose</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -190,7 +175,7 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
                     <div class="card-body">
                         <!-- Content for Final concentration -->
-                        10 mg/ml (intravenous)
+                        7 mg/ml (intravenous)
                         <div>
                         <span id="final"></span>
                     </div>
@@ -207,11 +192,23 @@
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                     <div class="card-body">
-                        Intravenous. Do not refrigerate or freeze. Vial is for single use only and should be used within 6 hours of opening
-                        <!-- Content for Preparation -->
-                         <div>
-                            <span id="prepare"></span>
+                        <ul>
+                            <li>
+                        Injection Prepare powder for solution by dissolving contents of 500-mg vial in 10 mL sterile water for injection. Reconstituted solution is stable at room temperature for 12 hours. Do not refrigerate.**
+                        <div>
+                            <span id="prepare1"></span>
                          </div>
+                        </li>
+                        <li>
+                        Oral suspension available in 200-mg/5 mL concentration. Store at room temperature. Shake well before administration.
+                        <div>
+                            <span id="prepare2"></span>
+                        </div>
+
+                        </li>
+                        </ul>
+                        <!-- Content for Preparation -->
+                         
                         
                     </div>
                 </div>
@@ -227,7 +224,7 @@
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                     <div class="card-body">
                         <!-- Content for Monitoring -->
-                        Assess for signs of pain. Monitor temperature. Assess liver function. Serum acetaminophen concentration is obtained only to assess toxicity.
+                        Monitor renal function at baseline and at least once weekly, particularly in patients with preexisting renal dysfunction on prolonged therapy.
                     </div>
                 </div>
             </div>
@@ -242,10 +239,7 @@
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                     <div class="card-body">
                         <!-- Content for Adverse effects -->
-                        Injection site events (pain and site reactions) and vomiting occur with IV
-                        acetaminophen. Rash, fever, thrombocytopenia, leukopenia, and neutropenia.
-                        Serious skin reactions have been reported from patients who were rechallenged with acetaminophen and had a recurrence of a serious skin reaction. 
-                        
+                        Common adverse events include nausea, vomiting, and rash
                     </div>
                 </div>
             </div>
@@ -260,7 +254,7 @@
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                     <div class="card-body">
                         <!-- Content for Solution incompatibility -->
-                        D5W, NS
+                        D5W or NS 
                     </div>
                 </div>
             </div>
@@ -275,7 +269,7 @@
                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                     <div class="card-body">
                         <!-- Content for Drug incompatibility -->
-                        Diazepam
+                        Fat emulsion. aztreonam, caffeine citrate, caspofungin, cefepime, dobutamine, dopamine, meropenem, and piperacillin-tazobactam.
                     </div>
                 </div>
             </div>
@@ -302,8 +296,9 @@
         </div>
 
         <script>
-            var prepare = "1000 mg  ในสารน้ำ 100 ml  ปริมาณยาที่ใช้ ( <strong style='color: red;'>{c}</strong> mg. X 100) ÷ 1,000 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
-            var finalA = "สูตร <strong style='color: red;'>{c}</strong> mg.  ÷ 10 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare1 = "สูตร  <strong style='color: red;'>{c}</strong> mg  ผสมในสารน้ำ 10 ml   ปริมาณยาที่ใช้ (<strong style='color: red;'>{c}</strong> mg. X 10) ÷ 500 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare2 = "สูตร  <strong style='color: red;'>{c}</strong> mg  ผสมในสารน้ำ 5 ml   ปริมาณยาที่ใช้ (<strong style='color: red;'>{c}</strong> mg. X 5) ÷ 200 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var finalA = "สูตร  <strong style='color: red;'>{c}</strong> mg.  ÷ 7 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
 
             function formatNumber(num) {
                 return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
@@ -328,8 +323,8 @@
                 var value = this.value;
                 if (value == null || value == "")
                     return;
-                if (value < 12 || value > 30) {
-                    showModal('Please enter a value between 12 and 30.');
+                if (value < 10 || value > 20) {
+                    showModal('Please enter a value between 10 and 20.');
                     this.value = '';
                     return;
                 }
@@ -340,11 +335,14 @@
                 var body = $("#bodyWeightInput").val();
                 var dose = $("#dose").val();
                 var d = dose * body;
-                var p = (dose * body * 100) / 1000;
-                var f = (dose * body / 10);
-                var p1 = prepare.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p));
+                var p1 = (dose * body * 10) / 500;
+                var p2 = (dose * body * 5) / 200;
+                var f = (dose * body / 7);
+                var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
+                var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
                 var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));
-                $("#prepare").html(p1);
+                $("#prepare1").html(pp1);
+                $("#prepare2").html(pp2);
                 $("#final").html(f1);
             }
         </script>
