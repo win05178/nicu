@@ -1,0 +1,351 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .body,.card-body,.card {
+            background-color: #fef7ff;
+            font-family: Arial, sans-serif;
+        }
+        .background-strip {
+            background-color: #fffcc4;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .centered-text {
+            color: #A16AE8;
+            text-align: center;
+            font-size: 2em;
+        }
+        .input-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input-container input {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media (max-width: 576px) {
+            .modal-dialog {
+                max-width: 90%;
+                margin: 1.75rem auto;
+            }
+            .modal-content {
+                padding: 10px;
+            }
+            .modal-header, .modal-footer {
+                padding: 10px;
+            }
+            .modal-title {
+                font-size: 1.2em;
+            }
+        }
+        .card {
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        .card-header {
+            cursor: pointer;
+            width: 90%;
+            border-top-right-radius: 40px !important;
+            border-bottom-right-radius: 40px !important;
+            margin-left: 0;
+            border: none; /* Remove border */
+        }
+        .card-header .btn-link {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+        }
+        .card-header .btn-link:hover {
+            text-decoration: none;
+        }
+        .card-header .btn-link:after {
+            content: '\02C4'; /* Up arrow */
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        .card-header .btn-link.collapsed:after {
+            content: '\02C5'; /* Down arrow */
+        }
+        .form-check {
+            margin-bottom: 10px;
+        }
+        .form-check-label {
+            font-size: 1.1em;
+            padding-left: 10px; /* Add padding between radio button and label */
+        }
+        .form-group {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 576px) {
+            .form-check-label {
+                font-size: 1em;
+            }
+            .form-check-input {
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+        td,th{
+            text-align: center;
+        }
+        
+    </style>
+    <body class="body">
+        <div class="background-strip">
+            <div class="centered-text">Amikacin</div>
+        </div>
+        <div class="input-container centered-text">
+            Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="300" id="bodyWeightInput"> Kg.
+        </div>
+
+        <div class="accordion" id="accordionExample" style="margin-top: 20px;">
+            <div class="card">
+                <div class="card-header" id="headingOne" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Dose
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                    <div class="card-body">
+                        <div class="input-container centered-text">
+                            Dose <input type="number" class="form-control d-inline w-auto" value="12" placeholder="0" min="0" max="200" id="dose"> Mg.
+                        </div>
+                        <hr>
+                        <div>
+                            <!-- New table for dosage information -->
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Postmenstrual Age</th>
+                                        <th>Postnatal Age</th>
+                                        <th>Dosage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3">29 weeks or less</td>
+                                        <td>0 to 7 days</td>
+                                        <td>14 mg/kg/dose every 48 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8 to 28 days</td>
+                                        <td>12 mg/kg/dose every 36 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29 days or older</td>
+                                        <td>12 mg/kg/dose every 24 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">30 to 34 weeks</td>
+                                        <td>0 to 7 days</td>
+                                        <td>12 mg/kg/dose every 36 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8 days or older</td>
+                                        <td>12 mg/kg/dose every 24 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td>35 weeks or more</td>
+                                        <td>All</td>
+                                        <td>12 mg/kg/dose every 24 hours</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Administration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        <!-- Content for Administration -->
+                        administer as IV infusion by syringe pump over 60 to 120 minutes
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Final concentration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                    <div class="card-body">
+                        <!-- Content for Final concentration -->
+                        10 mg/ml
+                        <div>
+                        <span id="final"></span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Preparation
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                       
+                        <!-- Content for Preparation -->
+                         <div>
+                            <span id="prepare1"></span>
+                         </div>
+                         <div>
+                            <span id="prepare2"></span>
+                         </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" id="headingSix" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Adverse effects
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Adverse effects -->
+                        Transient and reversible renal tubular dysfunction may occur, resulting in increased urinary losses of sodium, calcium, and magnesium. Vestibular and auditory ototoxicity may occur.
+The addition of other nephrotoxic and/or ototoxic medications (eg, furosemide, vancomycin) may increase these adverse effects. Increased neuromuscular blockade (ie, neuromuscular weakness and respiratory failure) may occur when used with pancuronium or other neuromuscular blocking agents and in patients with hypermagnesemia.
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Solution incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Solution incompatibility -->
+                        D5W, D10W, D20W, NS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Drug incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Drug incompatibility -->
+                        Fat emulsion. Amphotericin B, ampicillin, azithromycin, heparin (concentrations greater than 1 unit/mL), imipenem/cilastatin, mezlocillin, nafcillin, oxacillin, phenytoin, propofol, thiopental, and ticarcillin/clavulanate.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="alertModalLabel">Invalid Input</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Modal message will be set dynamically -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var prepare1 = "500 mg  ในสารน้ำ 2 ml  ปริมาณยาที่ใช้<br> ( <strong style='color: red;'>{c}</strong> mg. X 2) ÷ 500 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare2 = "50 mg  ในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> ( <strong style='color: red;'>{c}</strong> mg. X 10) ÷ 50 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var finalA = "สูตร <strong style='color: red;'>{c}</strong> mg.  ÷ 10 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+
+            function formatNumber(num) {
+                return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+            }
+
+            function showModal(message) {
+                document.getElementById('modalBody').innerText = message;
+                $('#alertModal').modal('show');
+            }
+
+            document.getElementById('bodyWeightInput').addEventListener('input', function() {
+                var value = this.value;
+                if (value < 0 || value > 300) {
+                    showModal('Please enter a value between 0 and 300.');
+                    this.value = '';
+                    return;
+                }
+                cal();
+            });
+
+            document.getElementById('dose').addEventListener('change', function() {
+                var value = this.value;
+                if (value == null || value == "")
+                    return;
+                if (value < 12 || value > 30) {
+                    showModal('Please enter a value between 12 and 30.');
+                    this.value = '';
+                    return;
+                }
+                cal();
+            });
+
+            function cal() {
+                var body = $("#bodyWeightInput").val();
+                var dose = $("#dose").val();
+                var d = dose * body;
+                var p1 = (dose * body * 2) / 500;
+                var p2 = (dose * body * 10) / 50;
+                var f = (dose * body / 10);
+                var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
+                var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
+                var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));
+                $("#prepare1").html(pp1);
+                $("#prepare2").html(pp2);
+                $("#final").html(f1);
+            }
+        </script>
+    </body>
+</html>

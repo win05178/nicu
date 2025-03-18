@@ -48,6 +48,31 @@
         ]
     },
     {
+        "id": 7,
+        "name": "Alprostadil",
+        "page": "https://win05178.github.io/nicu/alprostadil.html",
+        "incompatibility": [
+            
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Amikacin",
+        "page": "https://win05178.github.io/nicu/amikacin.html",
+        "incompatibility": [
+            "Fat emulsion", "Amphotericin B", "ampicillin", "azithromycin", "heparin (concentrations greater than 1 unit/mL)", "imipenem/cilastatin", "mezlocillin", "nafcillin", "oxacillin", "phenytoin", "propofol", "thiopental", "ticarcillin/clavulanate"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Aminophylline",
+        "page": "https://win05178.github.io/nicu/aminophylline.html",
+        "incompatibility": [
+            "Fat emulsion", "Amphotericin B", "ampicillin", "azithromycin", "heparin (concentrations greater than 1 unit/mL)", "imipenem/cilastatin", "mezlocillin", "nafcillin", "oxacillin", "phenytoin", "propofol", "thiopental", "ticarcillin/clavulanate",
+            "Amiodarone", "cefepime", "ceftriaxone", "ciprofloxacin", "clindamycin", "dobutamine", "epinephrine", "hydralazine", "insulin", "isoproterenol", "methylprednisolone", "penicillin G"
+        ]
+    },
+    {
         "id": 2,
         "name": "Diazepam",
         "page": "acetaminophen.html",

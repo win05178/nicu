@@ -1,0 +1,344 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .body,.card-body,.card {
+            background-color: #fef7ff;
+            font-family: Arial, sans-serif;
+        }
+        .background-strip {
+            background-color: #fffcc4;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .centered-text {
+            color: #A16AE8;
+            text-align: center;
+            font-size: 2em;
+        }
+        .input-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input-container input {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media (max-width: 576px) {
+            .modal-dialog {
+                max-width: 90%;
+                margin: 1.75rem auto;
+            }
+            .modal-content {
+                padding: 10px;
+            }
+            .modal-header, .modal-footer {
+                padding: 10px;
+            }
+            .modal-title {
+                font-size: 1.2em;
+            }
+        }
+        .card {
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        .card-header {
+            cursor: pointer;
+            width: 90%;
+            border-top-right-radius: 40px !important;
+            border-bottom-right-radius: 40px !important;
+            margin-left: 0;
+            border: none; /* Remove border */
+        }
+        .card-header .btn-link {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+        }
+        .card-header .btn-link:hover {
+            text-decoration: none;
+        }
+        .card-header .btn-link:after {
+            content: '\02C4'; /* Up arrow */
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        .card-header .btn-link.collapsed:after {
+            content: '\02C5'; /* Down arrow */
+        }
+        .form-check {
+            margin-bottom: 10px;
+        }
+        .form-check-label {
+            font-size: 1.1em;
+            padding-left: 10px; /* Add padding between radio button and label */
+        }
+        .form-group {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 576px) {
+            .form-check-label {
+                font-size: 1em;
+            }
+            .form-check-input {
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+        td,th{
+            text-align: center;
+        }
+        
+    </style>
+    <body class="body">
+        <div class="background-strip">
+            <div class="centered-text">Aminophylline</div>
+        </div>
+        <div class="input-container centered-text">
+            Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="300" id="bodyWeightInput"> Kg.
+        </div>
+
+        <div class="accordion" id="accordionExample" style="margin-top: 20px;">
+            <div class="card">
+                <div class="card-header" id="headingOne" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Dose
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                    <div class="card-body">
+                        <div class="input-container centered-text">
+                            Dose <input type="number" class="form-control d-inline w-auto" value="12" placeholder="0" min="0" max="200" id="dose"> Mg.
+                        </div>
+                        <hr>
+                        <div>
+                            <ul>
+                                <li>Loading dose: 8 mg/kg IV infusion over 30 to 60 minutes, or orally.</li>
+                                <li>Maintenance dose: 1.5 to 3 mg/kg/dose orally (start maintenance dose 8 to 12 hours after the loading dose).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne1" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                            Interval 
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1">
+                    <div class="card-body">
+                        IV every 8 to 12 hours
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Administration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        <!-- Content for Administration -->
+                        Intravenous bolus over 30 to 60 minutes. May give as 25-mg/mL
+                        concentration or further dilute to as low as 1 mg/mL for continuous infusion
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Final concentration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                    <div class="card-body">
+                        <!-- Content for Final concentration -->
+                        5 mg/mL
+                        <div>
+                        <span id="final"></span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Preparation
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                       
+                        <!-- Content for Preparation -->
+                         <div>
+                            <span id="prepare1"></span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Monitoring
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Monitoring -->
+                        Monitor heart rate and check blood glucose periodically with reagent strips. Assess for agitation and feeding intolerance.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Adverse effects
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Adverse effects -->
+                        GI irritation. Hyperglycemia. CNS irritability and sleeplessness. 
+                        Signs of toxicity: Sinus tachycardia, failure to gain weight, vomiting, jitteriness,
+                        hyperreflexia, and seizures.
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Solution incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Solution incompatibility -->
+                        D5W, D10W, NS
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Drug incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Drug incompatibility -->
+                        Amiodarone, cefepime, ceftriaxone, ciprofloxacin, clindamycin, dobutamine, epinephrine, hydralazine, insulin, isoproterenol, methylprednisolone, penicillin G.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="alertModalLabel">Invalid Input</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Modal message will be set dynamically -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var prepare1 = "250 mg  ในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> ( <strong style='color: red;'>{c}</strong> mg. X 10) ÷ 250 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            // var prepare2 = "50 mg  ในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> ( <strong style='color: red;'>{c}</strong> mg. X 10) ÷ 50 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var finalA = "สูตร <strong style='color: red;'>{c}</strong> mg.  ÷ 5 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+
+            function formatNumber(num) {
+                return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+            }
+
+            function showModal(message) {
+                document.getElementById('modalBody').innerText = message;
+                $('#alertModal').modal('show');
+            }
+
+            document.getElementById('bodyWeightInput').addEventListener('input', function() {
+                var value = this.value;
+                if (value < 0 || value > 300) {
+                    showModal('Please enter a value between 0 and 300.');
+                    this.value = '';
+                    return;
+                }
+                cal();
+            });
+
+            document.getElementById('dose').addEventListener('change', function() {
+                var value = this.value;
+                if (value == null || value == "")
+                    return;
+                if (value < 12 || value > 30) {
+                    showModal('Please enter a value between 12 and 30.');
+                    this.value = '';
+                    return;
+                }
+                cal();
+            });
+
+            function cal() {
+                var body = $("#bodyWeightInput").val();
+                var dose = $("#dose").val();
+                var d = dose * body;
+                var p1 = (dose * body * 10) / 250;
+                // var p2 = (dose * body * 10) / 50;
+                var f = (dose * body / 2);
+                var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
+                // var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
+                var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));
+                $("#prepare1").html(pp1);
+                // $("#prepare2").html(pp2);
+                $("#final").html(f1);
+            }
+        </script>
+    </body>
+</html>
