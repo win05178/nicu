@@ -1,0 +1,353 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .body,.card-body,.card {
+            background-color: #fef7ff;
+            font-family: Arial, sans-serif;
+        }
+        .background-strip {
+            background-color: #fffcc4;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .centered-text {
+            color: #A16AE8;
+            text-align: center;
+            font-size: 2em;
+        }
+        .input-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input-container input {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media (max-width: 576px) {
+            .modal-dialog {
+                max-width: 90%;
+                margin: 1.75rem auto;
+            }
+            .modal-content {
+                padding: 10px;
+            }
+            .modal-header, .modal-footer {
+                padding: 10px;
+            }
+            .modal-title {
+                font-size: 1.2em;
+            }
+        }
+        .card {
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        .card-header {
+            cursor: pointer;
+            width: 90%;
+            border-top-right-radius: 40px !important;
+            border-bottom-right-radius: 40px !important;
+            margin-left: 0;
+            border: none; /* Remove border */
+        }
+        .card-header .btn-link {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+        }
+        .card-header .btn-link:hover {
+            text-decoration: none;
+        }
+        .card-header .btn-link:after {
+            content: '\02C4'; /* Up arrow */
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        .card-header .btn-link.collapsed:after {
+            content: '\02C5'; /* Down arrow */
+        }
+        .form-check {
+            margin-bottom: 10px;
+        }
+        .form-check-label {
+            font-size: 1.1em;
+            padding-left: 10px; /* Add padding between radio button and label */
+        }
+        .form-group {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 576px) {
+            .form-check-label {
+                font-size: 1em;
+            }
+            .form-check-input {
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+        thead tr th {
+            text-align: center;
+        }
+        tbody tr td {
+            text-align: center;
+        }
+    </style>
+    <body class="body">
+        <div class="background-strip">
+            <div class="centered-text">Albumin (Human)</div>
+        </div>
+        <div class="input-container centered-text">
+            Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="300" id="bodyWeightInput"> Kg.
+        </div>
+
+        <div class="accordion" id="accordionExample" style="margin-top: 20px;">
+            <div class="card">
+                <div class="card-header" id="headingOne" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Dose
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                    <div class="card-body">
+                        <div class="input-container centered-text">
+                            Dose <input type="number" class="form-control d-inline w-auto" value="0" placeholder="0" min="0" max="200" id="dose"> g.
+                        </div>
+                        <hr>
+                        <ul>
+                            <li>Hemolytic disease of the newborn: 1 g/kg of 25% albumin IV administered approximately 1 hour prior to exchange transfusion.</li>
+                            <li>Hypotension: 0.5 g/kg (10 mL/kg) of 5% albumin IV over 20 to 30 minutes; may be repeated up to maximum of 3 doses.</li>
+                            <li>Septic shock: 0.5 g/kg (10 mL/kg) of 5% albumin IV over 5 to 10 minutes with repeat doses as needed up to maximum 3 g/kg (60 mL/kg) in the first hour until perfusion improves or hepatomegaly develop.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="card">
+                <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Administration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        <ul>
+                            <li>Administer slow enough to avoid too-rapid plasma volume expansion. The 5% and 25% may be administered without dilution or diluted with normal saline or D5W.</li>
+                            <li>Adequately hydrate patients during or after infusion of albumin 25% solutions.</li>
+                            <li>In patients with normal blood volume, avoid circulatory overload and pulmonary edema by administering albumin no faster than 1 mL/min.</li>
+                            <li>In the presence of hypertension, infuse at a slower rate.</li>
+                            <li>Do not administer more than 4 hours after vial has been entered. Ensure substitution of other blood constituents (coagulation factors, electrolytes, platelets, and erythrocytes) is adequate when replacing comparatively large volumes of albumin or if blood loss is severe.</li>
+                            <li>Warm to room temperature if infusing large volumes. In plasma exchange, adjust infusion rate to the rate of removal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Final concentration
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                    <div class="card-body">
+                        <!-- Content for Final concentration -->
+                       -
+                        <div>
+                        <span id="final"></span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Preparation
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Albuminar®-5: Preservative-free IV solution containing serum albumin 5% and supplied as 2.5 g/50 mL, 12.5 g/250 mL, and 25 g/500 mL in single-dose vials. May be administered undiluted.
+                        <div>
+                            <br>
+                            <span id="prepare1"></span>
+                         </div>
+                        </li>
+                        <br>
+                        <li>
+                            Albuminar®-20: Preservative-free IV solution containing serum albumin 20% and supplied as 10 g/50 mL and 20 g/100 mL in single-dose vials.
+                        <div>
+                            <br>
+                            <span id="prepare2"></span>
+                        </div>
+
+                        </li>
+                        </ul>
+                        <!-- Content for Preparation -->
+                         
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Monitoring
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Monitoring -->
+                        <ul>
+                            <li>Closely monitor infusion rates and the patient's clinical state during infusion. Observe injured patients after restoration of blood pressure for bleeding points that may have failed to bleed at lower blood pressure.</li>
+                            <li>Closely monitor for circulatory overload during administration. Regularly monitor hemodynamic performance, including arterial blood pressure and pulse rate, central venous pressure, pulmonary artery occlusion pressure, urine output, electrolyte levels, and HCT/Hb.</li>
+                            <li>Closely monitor hemodynamic parameters after administering for evidence of cardiac or respiratory failure, renal failure or increasing intracranial pressure.</li>
+                            <li>For a full-term newborn, the target heart rate and perfusion pressure (mean arterial pressure minus central venous pressure) are 110 to 160 beats/min and 55 mmHg, respectively.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Adverse effects
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Adverse effects -->
+                        Common: flushing, urticaria, fever, chills, nausea, vomiting, tachycardia, and hypotension. These reactions usually subside when the infusion rate is slowed or stopped.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Solution incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Solution incompatibility -->
+                        D5W or NS 
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button">
+                            Drug incompatibility
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Content for Drug incompatibility -->
+                        Fat emulsion. aztreonam, caffeine citrate, caspofungin, cefepime, dobutamine, dopamine, meropenem, and piperacillin-tazobactam.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="alertModalLabel">Invalid Input</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Modal message will be set dynamically -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var prepare1 = "ปริมาณยาที่ใช้ 25 gm ในสารน้ำ 250 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> gm. X 250) ÷ 25 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare2 = "ปริมาณยาที่ใช้ 10 gm ในสารน้ำ 50 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> gm. X 50) ÷ 10 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            // var finalA = "สูตร  <strong style='color: red;'>{c}</strong> mg.  ÷ 7 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+
+            function formatNumber(num) {
+                return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+            }
+
+            function showModal(message) {
+                document.getElementById('modalBody').innerText = message;
+                $('#alertModal').modal('show');
+            }
+
+            document.getElementById('bodyWeightInput').addEventListener('input', function() {
+                var value = this.value;
+                if (value < 0 || value > 300) {
+                    showModal('Please enter a value between 0 and 300.');
+                    this.value = '';
+                    return;
+                }
+                cal();
+            });
+
+            document.getElementById('dose').addEventListener('change', function() {
+                var value = this.value;
+                if (value == null || value == "")
+                    return;
+                if (value < 0 || value > 200) {
+                    showModal('Please enter a value between 0 and 200.');
+                    this.value = '';
+                    return;
+                }
+                cal();
+            });
+
+            function cal() {
+                var body = $("#bodyWeightInput").val();
+                var dose = $("#dose").val();
+                var d = dose * body;
+                var p1 = (dose * body * 250) / 25;
+                var p2 = (dose * body * 50) / 10;
+                // var f = (dose * body / 7);
+                var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
+                var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
+                // var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));
+                $("#prepare1").html(pp1);
+                $("#prepare2").html(pp2);
+                // $("#final").html(f1);
+            }
+        </script>
+    </body>
+</html>

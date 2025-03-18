@@ -32,6 +32,14 @@
         ]
     },
     {
+        "id": 5,
+        "name": "Albumin (Human)",
+        "page": "https://win05178.github.io/nicu/albumin.html",
+        "incompatibility": [
+            "Fat emulsion", "micafungin", "midazolam", "vancomycin", "verapamil"
+        ]
+    },
+    {
         "id": 2,
         "name": "Diazepam",
         "page": "acetaminophen.html",
