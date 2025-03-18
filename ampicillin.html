@@ -99,10 +99,16 @@
                 height: 1.5em;
             }
         }
+        thead tr th {
+            text-align: center;
+        }
+        tbody tr td {
+            text-align: center;
+        }
     </style>
     <body class="body">
         <div class="background-strip">
-            <div class="centered-text">Acetaminophen</div>
+            <div class="centered-text">Ampicillin</div>
         </div>
         <div class="input-container centered-text">
             Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="300" id="bodyWeightInput"> Kg.
@@ -120,47 +126,69 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="card-body">
                         <div class="input-container centered-text">
-                            Dose <input type="number" class="form-control d-inline w-auto" value="12" placeholder="0" min="0" max="200" id="dose"> Mg.
+                            Dose <input type="number" class="form-control d-inline w-auto" value="25" placeholder="0" min="0" max="200" id="dose"> Mg.
                         </div>
                         <hr>
-                        <div>
-                            <ul>
-                                <li><strong>Fever (Gestational age ≥ 32 weeks)</strong>
-                                    <ul>
-                                        <li>Intravenous: 12.5 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr>
-                            <ul>
-                                <li><strong>Fever/Pain</strong>
-                                    <ul>
-                                        <li><strong>Oral</strong>
-                                            <ul>
-                                                <li>Gestational age &lt; 32 weeks: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 12 hours</li>
-                                                <li>Gestational age ≥ 32 weeks: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 8 hours</li>
-                                                <li>Term infants: 20-25 mg/kg/dose, then 12-15 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Rectal</strong>
-                                            <ul>
-                                                <li>Gestational age &lt; 32 weeks: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 12 hours</li>
-                                                <li>Gestational age ≥ 32 weeks: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 8 hours</li>
-                                                <li>Term infants: 30 mg/kg/dose, then 12-18 mg/kg/dose, <strong>Interval:</strong> every 6 hours</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr>
-                            <ul>
-                                <li><strong>Closure of Patent Ductus Arteriosus</strong>
-                                    <ul>
-                                        <li>Oral: 15 mg/kg/dose, <strong>Interval:</strong> every 6 hours for 3 days</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        25 - 100 mg/kg/dose  
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingOne1" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                            Interval 
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1">
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>PMA (weeks)</th>
+                                    <th>PostNatal (days)</th>
+                                    <th>Interval (hours)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>≤29</td>
+                                    <td>0 to 28</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>≤29</td>
+                                    <td>>28</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>30 to 36</td>
+                                    <td>0 to 14</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>30 to 36</td>
+                                    <td>>14</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>37 to 44</td>
+                                    <td>0 to 7</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>37 to 44</td>
+                                    <td>>7</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>≥45</td>
+                                    <td>ALL</td>
+                                    <td>6</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -175,7 +203,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
                     <div class="card-body">
                         <!-- Content for Administration -->
-                        Administer intravenous over 15 minutes
+                        Intravenous slowly over 3 to 5 minutes
                     </div>
                 </div>
             </div>
@@ -190,7 +218,7 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
                     <div class="card-body">
                         <!-- Content for Final concentration -->
-                        10 mg/ml (intravenous)
+                        100 mg/ml
                         <div>
                         <span id="final"></span>
                     </div>
@@ -207,30 +235,19 @@
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                     <div class="card-body">
-                        Intravenous. Do not refrigerate or freeze. Vial is for single use only and should be used within 6 hours of opening
+                      
                         <!-- Content for Preparation -->
                          <div>
-                            <span id="prepare"></span>
+                            <span id="prepare1"></span>
+                         </div>
+                         <div>
+                            <span id="prepare2"></span>
                          </div>
                         
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Monitoring
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <!-- Content for Monitoring -->
-                        Assess for signs of pain. Monitor temperature. Assess liver function. Serum acetaminophen concentration is obtained only to assess toxicity.
-                    </div>
-                </div>
-            </div>
+            
             <div class="card">
                 <div class="card-header" id="headingSix" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                     <h2 class="mb-0">
@@ -242,10 +259,7 @@
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                     <div class="card-body">
                         <!-- Content for Adverse effects -->
-                        Injection site events (pain and site reactions) and vomiting occur with IV
-                        acetaminophen. Rash, fever, thrombocytopenia, leukopenia, and neutropenia.
-                        Serious skin reactions have been reported from patients who were rechallenged with acetaminophen and had a recurrence of a serious skin reaction. 
-                        
+                        Very large doses may result in CNS excitation or seizure activity. Moderate prolongation of bleeding times (by approximately 60 seconds) has been reported after the third or fourth dose in neonates 33 to 41 weeks GA receiving 50 to 100 mg/kg every 12 hours[15]. Prolongation of bleeding times (by approximately 2 minutes) has also been reported after at least 10 doses in preterm very low birth-weight neonates 23 to 30 weeks GA receiving 50 to 100 mg/kg every 12 hours [16]. The clinical implications of the prolonged bleeding time is unknown. Hypersensitivity reactions (maculopapular rash, urticarial rash, or fever) are rare in neonates.
                     </div>
                 </div>
             </div>
@@ -260,7 +274,7 @@
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                     <div class="card-body">
                         <!-- Content for Solution incompatibility -->
-                        D5W, NS
+                        D5W, lactated ringer's solution, NS, sterile water.
                     </div>
                 </div>
             </div>
@@ -275,7 +289,7 @@
                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                     <div class="card-body">
                         <!-- Content for Drug incompatibility -->
-                        Diazepam
+                        Amikacin, amiodarone, dopamine, epinephrine, erythromycin lactobionate, fluconazole, gentamicin, hydralazine, metoclopramide, midazolam, nicardipine, sodium bicarbonate
                     </div>
                 </div>
             </div>
@@ -302,8 +316,9 @@
         </div>
 
         <script>
-            var prepare = "1000 mg  ในสารน้ำ 100 ml  ปริมาณยาที่ใช้<br> ( <strong style='color: red;'>{c}</strong> mg. X 100) ÷ 1,000 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
-            var finalA = "สูตร <strong style='color: red;'>{c}</strong> mg.  ÷ 10 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare1 = "250 mg    ผสมในสารน้ำ 5 ml   ปริมาณยาที่ใช้<br> (<b style='color: red;'>{c}</b> mg. X 5) ÷ 250 = <b style='color: red; font-size: 1.5em;'>{r}</b> ml";
+            var prepare2 = "1000 mg  ผสมในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> (<b style='color: red;'>{c}</b> mg. X 10) ÷ 1000 = <b style='color: red; font-size: 1.5em;'>{r}</b> ml";
+            var finalA = "สูตร  <b style='color: red;'>{c}</b> mg.  ÷ 100 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <b style='color: red; font-size: 1.5em;'>{r}</b> ml";
 
             function formatNumber(num) {
                 return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
@@ -328,8 +343,8 @@
                 var value = this.value;
                 if (value == null || value == "")
                     return;
-                if (value < 12 || value > 30) {
-                    showModal('Please enter a value between 12 and 30.');
+                if (value < 25 || value > 100) {
+                    showModal('Please enter a value between 25 and 100.');
                     this.value = '';
                     return;
                 }
@@ -340,11 +355,14 @@
                 var body = $("#bodyWeightInput").val();
                 var dose = $("#dose").val();
                 var d = dose * body;
-                var p = (dose * body * 100) / 1000;
-                var f = (dose * body / 10);
-                var p1 = prepare.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p));
+                var p1 = (dose * body * 5) / 250;
+                var p2 = (dose * body * 10) / 1000;
+                var f = (dose * body / 100);
+                var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
+                var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
                 var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));
-                $("#prepare").html(p1);
+                $("#prepare1").html(pp1);
+                $("#prepare2").html(pp2);
                 $("#final").html(f1);
             }
         </script>

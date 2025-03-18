@@ -16,6 +16,14 @@
         ]
     },
     {
+        "id": 3,
+        "name": "Ampicillin",
+        "page": "https://win05178.github.io/nicu/ampicillin.html",
+        "incompatibility": [
+            "Amikacin", "amiodarone", "dopamine", "epinephrine", "erythromycin lactobionate", "fluconazole", "gentamicin", "hydralazine", "metoclopramide", "midazolam"
+        ]
+    },
+    {
         "id": 2,
         "name": "Diazepam",
         "page": "acetaminophen.html",
