@@ -217,12 +217,79 @@
         "name": "CefTAZidime",
         "page": "https://win05178.github.io/nicu/CefTAZidime.html",
         "incompatibility": [
+            "Amiodarone", 
             "Azithromycin", 
+            "Erythromycin lactobionate", 
             "Fluconazole", 
-            "Protamine sulfate", 
-            "Sodium bicarbonate", 
-            "Vancomycin",
-            "Erythromycin lactobionate"
+            "Midazolam", 
+            "Nicardipine", 
+            "Phenytoin", 
+            "Vancomycin"
+        ]
+    }
+    ,
+    {
+        "id": 25,
+        "name": "CefTRIAXone",
+        "page": "https://win05178.github.io/nicu/CefTRIAXone.html",
+        "incompatibility": [
+            "Aminophylline", 
+            "Azithromycin", 
+            "Calcium chloride", 
+            "Calcium gluconate", 
+            "Caspofungin", 
+            "Fluconazole", 
+            "Vancomycin"
+        ]
+    } ,
+    {
+        "id": 26,
+        "name": "Chloral hydrate",
+        "page": "https://win05178.github.io/nicu/ChloralHydrate.html",
+        "incompatibility": [
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Clindamycin",
+        "page": "https://win05178.github.io/nicu/Clindamycin.html",
+        "incompatibility": [
+            "Aminophylline", 
+            "Azithromycin", 
+            "Barbiturates", 
+            "Caspofungin", 
+            "Fluconazole", 
+            "Phenytoin"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Colistin",
+        "page": "https://win05178.github.io/nicu/Colistin.html",
+        "incompatibility": [
+            "Vancomycin", "Amphotericin B"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Dexamethasone",
+        "page": "https://win05178.github.io/nicu/Dexamethasone.html",
+        "incompatibility": [
+            "Glycopyrrolate", "midazolam", "vancomycin"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Diazoxide",
+        "page": "https://win05178.github.io/nicu/Diazoxide.html",
+        "incompatibility": [
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Digoxin (Oral)",
+        "page": "https://win05178.github.io/nicu/DiazoxideOral.html",
+        "incompatibility": [
         ]
     }
 ]
