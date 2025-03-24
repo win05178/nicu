@@ -100,16 +100,14 @@
                 height: 1.5em;
             }
         }
-        thead tr th {
+        td,th{
             text-align: center;
         }
-        tbody tr td {
-            text-align: center;
-        }
+        
     </style>
     <body class="body">
         <div class="background-strip">
-            <div class="centered-text">Ampicillin</div>
+            <div class="centered-text">Cefotaxime</div>
         </div>
         <div class="input-container centered-text">
             Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="300" id="bodyWeightInput"> Kg.
@@ -127,10 +125,45 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="card-body">
                         <div class="input-container centered-text">
-                            Dose <input type="number" class="form-control d-inline w-auto" value="25" placeholder="0" min="0" max="200" id="dose"> Mg.
+                            Dose <input type="number" class="form-control d-inline w-auto" value="50" placeholder="0" min="50" max="200" id="dose"> Mg.
                         </div>
                         <hr>
-                        25 - 100 mg/kg/dose  
+                        <ul>
+                            <li>Sepsis: 50 mg/kg/dose (interval ตามตาราง)
+                                <table class="table table-bordered table-striped" style="margin-top: 10px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestational Age (weeks)</th>
+                                            <th>PostNatal (days)</th>
+                                            <th>Interval (hours)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>All weeks</td>
+                                            <td>Younger than 7 days</td>
+                                            <td>12 hours</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Less than 32 weeks</td>
+                                            <td>7 days or older</td>
+                                            <td>8 hours</td>
+                                        </tr>
+                                        <tr>
+                                            <td>32 weeks or more</td>
+                                            <td>7 days or older</td>
+                                            <td>6 hours</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li>Meningitis:
+                                <ul>
+                                    <li>0 to 7 days of age: 100 to 150 mg/kg/day IV divided every 8 to 12 hours.</li>
+                                    <li>8 days or older: 150 to 200 mg/kg/day IV divided every 6 to 8 hours.</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -144,72 +177,16 @@
                 </div>
                 <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
                     <div class="card-body">
+                        Reconstituted solution for IV use is stable for 24 hours at room temperature and 7 days refrigerated. 
+                        <br>Prefil 50 mg/ml : 
                         <div>
                             <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i> <span id="prepare1"></span>
                         </div>
                         <hr>
+                        <br>Vial 1000 mg : 
                         <div>
                             <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i> <span id="prepare2"></span>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingOne1" style="background-color: #fffcc4;">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
-                            Interval 
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1">
-                    <div class="card-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>PMA (weeks)</th>
-                                    <th>PostNatal (days)</th>
-                                    <th>Interval (hours)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>≤29</td>
-                                    <td>0 to 28</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>≤29</td>
-                                    <td>>28</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>30 to 36</td>
-                                    <td>0 to 14</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>30 to 36</td>
-                                    <td>>14</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>37 to 44</td>
-                                    <td>0 to 7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>37 to 44</td>
-                                    <td>>7</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>≥45</td>
-                                    <td>ALL</td>
-                                    <td>6</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
@@ -224,7 +201,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
                     <div class="card-body">
                         <!-- Content for Administration -->
-                        Intravenous slowly over 3 to 5 minutes
+                        IV infusion, infuse over 10 to 30 minutes
                     </div>
                 </div>
             </div>
@@ -239,13 +216,14 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
                     <div class="card-body">
                         <!-- Content for Final concentration -->
-                        100 mg/ml
+                        Maximum 10 to 40 mg/mL
                         <div>
                         <span id="final"></span>
                     </div>
                     </div>
                 </div>
             </div>
+            
             <div class="card">
                 <div class="card-header" id="headingSix" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                     <h2 class="mb-0">
@@ -257,7 +235,7 @@
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix">
                     <div class="card-body">
                         <!-- Content for Adverse effects -->
-                        Very large doses may result in CNS excitation or seizure activity. Moderate prolongation of bleeding times (by approximately 60 seconds) has been reported after the third or fourth dose in neonates 33 to 41 weeks GA receiving 50 to 100 mg/kg every 12 hours[15]. Prolongation of bleeding times (by approximately 2 minutes) has also been reported after at least 10 doses in preterm very low birth-weight neonates 23 to 30 weeks GA receiving 50 to 100 mg/kg every 12 hours [16]. The clinical implications of the prolonged bleeding time is unknown. Hypersensitivity reactions (maculopapular rash, urticarial rash, or fever) are rare in neonates.
+                        rash, phlebitis, diarrhea, leukopenia, granulocytopenia, and eosinophilia.
                     </div>
                 </div>
             </div>
@@ -269,10 +247,10 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven">
                     <div class="card-body">
                         <!-- Content for Solution incompatibility -->
-                        D5W, lactated ringer's solution, NS, sterile water.
+                        D5W, D10W, and NS.
                     </div>
                 </div>
             </div>
@@ -284,10 +262,10 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight">
                     <div class="card-body">
                         <!-- Content for Drug incompatibility -->
-                        Amikacin, amiodarone, dopamine, epinephrine, erythromycin lactobionate, fluconazole, gentamicin, hydralazine, metoclopramide, midazolam, nicardipine, sodium bicarbonate
+                        Azithromycin, fluconazole, protamine sulfate, sodium bicarbonate, and vancomycin.
                     </div>
                 </div>
             </div>
@@ -314,9 +292,9 @@
         </div>
 
         <script>
-            var prepare1 = "250 mg    ผสมในสารน้ำ 5 ml   ปริมาณยาที่ใช้<br> (<b style='color: red;'>{c}</b> mg. X 5) ÷ 250 = <b style='color: red; font-size: 1.5em; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</b> ml";
-            var prepare2 = "1000 mg  ผสมในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> (<b style='color: red;'>{c}</b> mg. X 10) ÷ 1000 = <b style='color: red; font-size: 1.5em; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</b> ml";
-            var finalA = "สูตร  <b style='color: red;'>{c}</b> mg.  ÷ 100 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <b style='color: red; font-size: 1.5em;'>{r}</b> ml";
+            var prepare1 = "500 mg  ในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> ( <strong style='color: red;'>{c}</strong> mg. X 10) ÷ 500 = <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
+            var prepare2 = "1000 mg  ในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> ( <strong style='color: red;'>{c}</strong> mg. X 10) ÷ 1000 = <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
+            var finalA = "สูตร <strong style='color: red;'>{c}</strong> mg.  ÷ 40 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong>  ml";
 
             function formatNumber(num) {
                 return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
@@ -329,8 +307,8 @@
 
             document.getElementById('bodyWeightInput').addEventListener('input', function() {
                 var value = this.value;
-                if (value < 0 || value > 300) {
-                    showModal('Please enter a value between 0 and 300.');
+                if (value < Number.parseFloat($("#bodyWeightInput").attr("min")) || value > Number.parseFloat($("#bodyWeightInput").attr("max"))) {
+                    showModal('Please enter a value between '+$("#bodyWeightInput").attr("min")+' and '+$("#bodyWeightInput").attr("max")+'.');
                     this.value = '';
                     return;
                 }
@@ -341,8 +319,8 @@
                 var value = this.value;
                 if (value == null || value == "")
                     return;
-                if (value < 25 || value > 100) {
-                    showModal('Please enter a value between 25 and 100.');
+                if (value < Number.parseFloat($("#dose").attr("min")) || value > Number.parseFloat($("#dose").attr("max"))) {
+                    showModal('Please enter a value between '+$("#dose").attr("min")+' and '+$("#dose").attr("max")+'.');
                     this.value = '';
                     return;
                 }
@@ -353,9 +331,9 @@
                 var body = $("#bodyWeightInput").val();
                 var dose = $("#dose").val();
                 var d = dose * body;
-                var p1 = (dose * body * 5) / 250;
+                var p1 = (dose * body * 10) / 500;
                 var p2 = (dose * body * 10) / 1000;
-                var f = (dose * body / 100);
+                var f = (dose * body / 40);
                 var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
                 var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
                 var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));

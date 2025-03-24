@@ -100,16 +100,14 @@
                 height: 1.5em;
             }
         }
-        thead tr th {
+        td,th{
             text-align: center;
         }
-        tbody tr td {
-            text-align: center;
-        }
+        
     </style>
     <body class="body">
         <div class="background-strip">
-            <div class="centered-text">Ampicillin</div>
+            <div class="centered-text">Amphotericin B Liposome</div>
         </div>
         <div class="input-container centered-text">
             Body Weight <input type="number" class="form-control d-inline w-auto" placeholder="0" min="0" max="300" id="bodyWeightInput"> Kg.
@@ -127,13 +125,13 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                     <div class="card-body">
                         <div class="input-container centered-text">
-                            Dose <input type="number" class="form-control d-inline w-auto" value="25" placeholder="0" min="0" max="200" id="dose"> Mg.
+                            Dose <input type="number" class="form-control d-inline w-auto" value="2.5" placeholder="0" min="2.5" max="7" id="dose"> Mg.
                         </div>
-                        <hr>
-                        25 - 100 mg/kg/dose  
+                        
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-header" id="headingFour" style="background-color: #fffcc4;">
                     <h2 class="mb-0">
@@ -145,15 +143,14 @@
                 <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
                     <div class="card-body">
                         <div>
-                            <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i> <span id="prepare1"></span>
-                        </div>
-                        <hr>
-                        <div>
-                            <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i> <span id="prepare2"></span>
+                            <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i><span id="prepare1"></span><br>
+                            Immediately shake vial vigorously for 30 seconds. Check for complete dispersion. Reconstituted suspension stable for 24 hours refrigerated.
+Do not freeze. Protect from light.
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-header" id="headingOne1" style="background-color: #fffcc4;">
                     <h2 class="mb-0">
@@ -164,52 +161,7 @@
                 </div>
                 <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1">
                     <div class="card-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>PMA (weeks)</th>
-                                    <th>PostNatal (days)</th>
-                                    <th>Interval (hours)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>≤29</td>
-                                    <td>0 to 28</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>≤29</td>
-                                    <td>>28</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>30 to 36</td>
-                                    <td>0 to 14</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>30 to 36</td>
-                                    <td>>14</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>37 to 44</td>
-                                    <td>0 to 7</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>37 to 44</td>
-                                    <td>>7</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>≥45</td>
-                                    <td>ALL</td>
-                                    <td>6</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        IV infusion every 24 hours 
                     </div>
                 </div>
             </div>
@@ -224,7 +176,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
                     <div class="card-body">
                         <!-- Content for Administration -->
-                        Intravenous slowly over 3 to 5 minutes
+                        Administer by IV infusion at a concentration of 1 to 2 mg/mL over a period of approximately 60 (if well tolerated) to 120 minutes. To provide sufficient volume for infusion, a final concentration of 0.2 to 0.5 mg/mL may be appropriate for infants and small children. The recommended standard concentrations are 1 or 2 mg/mL [3]. May increase infusion time if patient experiences intolerance during the infusion. Flush existing IV line with D5W prior to infusion or administer in a separate IV line. In-line filter with pore diameter no less than 1 micron may be used.
                     </div>
                 </div>
             </div>
@@ -239,10 +191,27 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
                     <div class="card-body">
                         <!-- Content for Final concentration -->
-                        100 mg/ml
+                        0.2 to 0.5 mg/mL
                         <div>
                         <span id="final"></span>
                     </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Monitoring
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
+                    <div class="card-body">
+                        <!-- Content for Monitoring -->
+                        Laboratory Exam: Monitor renal function frequently during therapy. Liver function, serum electrolytes (especially magnesium and potassium), and CBC should be assessed regularly during therapy.
+                        For candidemia, monitor blood cultures daily or every other day until Candida is cleared.
+                        
                     </div>
                 </div>
             </div>
@@ -257,7 +226,8 @@
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix">
                     <div class="card-body">
                         <!-- Content for Adverse effects -->
-                        Very large doses may result in CNS excitation or seizure activity. Moderate prolongation of bleeding times (by approximately 60 seconds) has been reported after the third or fourth dose in neonates 33 to 41 weeks GA receiving 50 to 100 mg/kg every 12 hours[15]. Prolongation of bleeding times (by approximately 2 minutes) has also been reported after at least 10 doses in preterm very low birth-weight neonates 23 to 30 weeks GA receiving 50 to 100 mg/kg every 12 hours [16]. The clinical implications of the prolonged bleeding time is unknown. Hypersensitivity reactions (maculopapular rash, urticarial rash, or fever) are rare in neonates.
+                        hypokalemia, chills, vomiting, hypertension 
+                        
                     </div>
                 </div>
             </div>
@@ -269,10 +239,10 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven">
                     <div class="card-body">
                         <!-- Content for Solution incompatibility -->
-                        D5W, lactated ringer's solution, NS, sterile water.
+                        D5W, D10W, D20W, D25W
                     </div>
                 </div>
             </div>
@@ -284,10 +254,10 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight">
                     <div class="card-body">
                         <!-- Content for Drug incompatibility -->
-                        Amikacin, amiodarone, dopamine, epinephrine, erythromycin lactobionate, fluconazole, gentamicin, hydralazine, metoclopramide, midazolam, nicardipine, sodium bicarbonate
+                        NS
                     </div>
                 </div>
             </div>
@@ -314,9 +284,9 @@
         </div>
 
         <script>
-            var prepare1 = "250 mg    ผสมในสารน้ำ 5 ml   ปริมาณยาที่ใช้<br> (<b style='color: red;'>{c}</b> mg. X 5) ÷ 250 = <b style='color: red; font-size: 1.5em; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</b> ml";
-            var prepare2 = "1000 mg  ผสมในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> (<b style='color: red;'>{c}</b> mg. X 10) ÷ 1000 = <b style='color: red; font-size: 1.5em; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</b> ml";
-            var finalA = "สูตร  <b style='color: red;'>{c}</b> mg.  ÷ 100 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <b style='color: red; font-size: 1.5em;'>{r}</b> ml";
+            var prepare1 = "สูตร  50 mg  ผสมในสารน้ำD5W  10 ml ปริมาณยาที่ใช้ ({c} mg. X 10) ÷ 50  = {r} ml";
+            // var prepare2 = "50 mg  ในสารน้ำ 10 ml  ปริมาณยาที่ใช้<br> (<strong style='color: red;'>{c}</strong> mg. X 10) ÷ 50 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var finalA = "สูตร  {c} mg.  ÷ 0.1 mg/ml ต้องผสมสารน้ำไม่น้อยกว่า {r} ml";
 
             function formatNumber(num) {
                 return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
@@ -329,8 +299,8 @@
 
             document.getElementById('bodyWeightInput').addEventListener('input', function() {
                 var value = this.value;
-                if (value < 0 || value > 300) {
-                    showModal('Please enter a value between 0 and 300.');
+                if (value < 0 || value > 30) {
+                    showModal('Please enter a value between 0 and 30.');
                     this.value = '';
                     return;
                 }
@@ -341,8 +311,8 @@
                 var value = this.value;
                 if (value == null || value == "")
                     return;
-                if (value < 25 || value > 100) {
-                    showModal('Please enter a value between 25 and 100.');
+                if (value < 2.5 || value > 7) {
+                    showModal('Please enter a value between 2.5 and 7.');
                     this.value = '';
                     return;
                 }
@@ -353,14 +323,14 @@
                 var body = $("#bodyWeightInput").val();
                 var dose = $("#dose").val();
                 var d = dose * body;
-                var p1 = (dose * body * 5) / 250;
-                var p2 = (dose * body * 10) / 1000;
-                var f = (dose * body / 100);
+                var p1 = (dose * body * 12) / 50;
+                // var p2 = (dose * body * 10) / 50;
+                var f = (dose * body) / 0.5;
                 var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
-                var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
+                // var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
                 var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));
                 $("#prepare1").html(pp1);
-                $("#prepare2").html(pp2);
+                // $("#prepare2").html(pp2);
                 $("#final").html(f1);
             }
         </script>

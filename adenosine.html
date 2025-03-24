@@ -5,6 +5,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </head>
     <style>
         .body,.card-body,.card {
@@ -140,6 +141,29 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header" id="headingFour" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            Preparation
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
+                    <div class="card-body">
+                        <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i>Store at room temperature. Do not refrigerate; crystallization will occur. Solution must be clear at the time of use.
+**Use 1 mL (3000 mcg) with 9-mL NS to make a solution with a final concentration of 300 mcg/ml.**
+
+<div>
+    <br>
+    <span id="prepare"></span>
+ </div>
+                        <!-- Content for Preparation -->
+                         
+                        
+                    </div>
+                </div>
+            </div>
            
             <div class="card">
                 <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
@@ -176,29 +200,6 @@ the patient as possible. Follow with a rapid saline flush of 5 to 10 mL after ea
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="headingFour" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Preparation
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Store at room temperature. Do not refrigerate; crystallization will occur. Solution must be clear at the time of use.
-**Use 1 mL (3000 mcg) with 9-mL NS to make a solution with a final concentration of 300 mcg/ml.**
-
-<div>
-    <br>
-    <span id="prepare"></span>
- </div>
-                        <!-- Content for Preparation -->
-                         
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="card">
                 <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -206,7 +207,7 @@ the patient as possible. Follow with a rapid saline flush of 5 to 10 mL after ea
                         </button>
                     </h2>
                 </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
                     <div class="card-body">
                         <!-- Content for Monitoring -->
                         Continuous EKG and blood pressure monitoring.
@@ -221,7 +222,7 @@ the patient as possible. Follow with a rapid saline flush of 5 to 10 mL after ea
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix">
                     <div class="card-body">
                         <!-- Content for Adverse effects -->
                         Flushing, dyspnea, and irritability occur frequently, but usually resolve within 1 minute. 
@@ -241,7 +242,7 @@ the patient as possible. Follow with a rapid saline flush of 5 to 10 mL after ea
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven">
                     <div class="card-body">
                         <!-- Content for Solution incompatibility -->
                         D5W and NS.
@@ -256,7 +257,7 @@ the patient as possible. Follow with a rapid saline flush of 5 to 10 mL after ea
                         </button>
                     </h2>
                 </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight">
                     <div class="card-body">
                         <!-- Content for Drug incompatibility -->
                        
@@ -286,8 +287,8 @@ the patient as possible. Follow with a rapid saline flush of 5 to 10 mL after ea
         </div>
 
         <script>
-            var prepare = "สูตร 3,000 mcg ผสมในสารน้ำ 10 ml ปริมาณยาที่ใช้<br> (<span class='highlight'><b>{c}</b></span> mcg. X 10) ÷ 3,000 = <span class='highlight'>{r}</span> ml";
-            var finalA = "สูตร  <span class='highlight'><b>{c}</b></span> mcg. ÷ 300 mcg/ml ต้องผสมสารน้ำไม่น้อยกว่า  <span class='highlight'>{r}</span> ml";
+            var prepare = "สูตร 3,000 mcg ผสมในสารน้ำ 10 ml ปริมาณยาที่ใช้<br> (<strong style='color: red;'>{c}</strong> mcg. X 10) ÷ 3,000 = <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
+            var finalA = "สูตร  <strong style='color: red;'>{c}</strong> mcg. ÷ 300 mcg/ml ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
 
             function formatNumber(num) {
                 return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });

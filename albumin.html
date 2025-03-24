@@ -5,6 +5,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </head>
     <style>
         .body,.card-body,.card {
@@ -137,7 +138,26 @@
                     </div>
                 </div>
             </div>
-           
+            <div class="card">
+                <div class="card-header" id="headingFour" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Preparation
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
+                    <div class="card-body">
+                        <div>
+                            <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i><span id="prepare1"></span>
+                        </div>
+                        <hr
+                        <div>
+                            <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i><span id="prepare2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
                     <h2 class="mb-0">
@@ -178,40 +198,6 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="headingFour" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Preparation
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                Albuminar®-5: Preservative-free IV solution containing serum albumin 5% and supplied as 2.5 g/50 mL, 12.5 g/250 mL, and 25 g/500 mL in single-dose vials. May be administered undiluted.
-                        <div>
-                            <br>
-                            <span id="prepare1"></span>
-                         </div>
-                        </li>
-                        <br>
-                        <li>
-                            Albuminar®-20: Preservative-free IV solution containing serum albumin 20% and supplied as 10 g/50 mL and 20 g/100 mL in single-dose vials.
-                        <div>
-                            <br>
-                            <span id="prepare2"></span>
-                        </div>
-
-                        </li>
-                        </ul>
-                        <!-- Content for Preparation -->
-                         
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="card">
                 <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -219,7 +205,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
                     <div class="card-body">
                         <!-- Content for Monitoring -->
                         <ul>
@@ -239,7 +225,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix">
                     <div class="card-body">
                         <!-- Content for Adverse effects -->
                         Common: flushing, urticaria, fever, chills, nausea, vomiting, tachycardia, and hypotension. These reactions usually subside when the infusion rate is slowed or stopped.
@@ -254,7 +240,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven">
                     <div class="card-body">
                         <!-- Content for Solution incompatibility -->
                         D5W or NS 
@@ -269,7 +255,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight">
                     <div class="card-body">
                         <!-- Content for Drug incompatibility -->
                         Fat emulsion. aztreonam, caffeine citrate, caspofungin, cefepime, dobutamine, dopamine, meropenem, and piperacillin-tazobactam.
@@ -299,9 +285,8 @@
         </div>
 
         <script>
-            var prepare1 = "ปริมาณยาที่ใช้ 25 gm ในสารน้ำ 250 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> gm. X 250) ÷ 25 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
-            var prepare2 = "ปริมาณยาที่ใช้ 10 gm ในสารน้ำ 50 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> gm. X 50) ÷ 10 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
-            // var finalA = "สูตร  <strong style='color: red;'>{c}</strong> mg.  ÷ 7 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare1 = "ปริมาณยาที่ใช้ 25 gm ในสารน้ำ 250 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> gm. X 250) ÷ 25 = <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
+            var prepare2 = "ปริมาณยาที่ใช้ 10 gm ในสารน้ำ 50 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> gm. X 50) ÷ 10 = <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
 
             function formatNumber(num) {
                 return num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
@@ -340,13 +325,10 @@
                 var d = dose * body;
                 var p1 = (dose * body * 250) / 25;
                 var p2 = (dose * body * 50) / 10;
-                // var f = (dose * body / 7);
                 var pp1 = prepare1.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p1));
                 var pp2 = prepare2.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(p2));
-                // var f1 = finalA.replace("{c}", formatNumber(d)).replace("{r}", formatNumber(f));
                 $("#prepare1").html(pp1);
                 $("#prepare2").html(pp2);
-                // $("#final").html(f1);
             }
         </script>
     </body>

@@ -73,27 +73,156 @@
         ]
     },
     {
-        "id": 2,
-        "name": "Diazepam",
-        "page": "acetaminophen.html",
+        "id": 10,
+        "name": "Alprostadil",
+        "page": "https://win05178.github.io/nicu/alprostadil.html",
+        "incompatibility": [ ]
+    },
+    {
+        "id": 11,
+        "name": "Amiodarone",
+        "page": "https://win05178.github.io/nicu/amiodarone.html",
         "incompatibility": [
-            "Acetaminophen"
+            "Aminophylline", "ampicillin", "ceftazidime", "cefazolin", "digoxin", "heparin", "imipenem-cilastatin", "mezlocillin", "micafungin", "piperacillin", "piperacillin-tazobactam", "sodium bicarbonate", "sodium nitroprusside"
         ]
     },
     {
-        "id": 3,
-        "name": "AB",
-        "page": "acetaminophen.html",
+        "id": 12,
+        "name": "Amphotericin B Lipid Complex",
+        "page": "https://win05178.github.io/nicu/AmphotericinBLipidComplex.html",
         "incompatibility": [
-            "Acetaminophen"
+            "NS"
         ]
     },
     {
-        "id": 4,
-        "name": "BC",
-        "page": "acetaminophen.html",
+        "id": 13,
+        "name": "Amphotericin B",
+        "page": "https://win05178.github.io/nicu/AmphotericinB.html",
         "incompatibility": [
-            "AB", "Acetaminophen"
+            "NS", "Fat emulsion", "Amikacin", "Aztreonam", "Calcium chloride", "Calcium gluconate", "Cefepime", "Cimetidine", "Ciprofloxacin", "Dopamine", "Enalaprilat", "Fluconazole", "Gentamicin", "Linezolid", "Magnesium sulfate", "Meropenem", "Penicillin G", "Piperacillin/tazobactam", "Potassium chloride", "Propofol", "Ranitidine", "Remifentanil", "Tobramycin"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Aspirin",
+        "page": "https://win05178.github.io/nicu/aspirin.html",
+        "incompatibility": []
+    },
+    {
+        "id": 15,
+        "name": "Beractant",
+        "page": "https://win05178.github.io/nicu/beractant.html",
+        "incompatibility": []
+    },
+    {
+        "id": 16,
+        "name": "Bevacizumab",
+        "page": "https://win05178.github.io/nicu/bevacizumab.html",
+        "incompatibility": ["D5W"]
+    },
+    {
+        "id": 18,
+        "name": "Caffeine Citrate",
+        "page": "https://win05178.github.io/nicu/CaffeineCitrate.html",
+        "incompatibility": [
+            "D5W", 
+            "Acyclovir", 
+            "furosemide", 
+            "ibuprofen lysine", 
+            "lorazepam", 
+            "nitroglycerin", 
+            "oxacillin"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Calcium Gluconate",
+        "page": "https://win05178.github.io/nicu/CalciumGluconate.html",
+        "incompatibility": [
+            "D5W",
+            "Amphotericin B",
+            "ceftriaxone",
+            "fluconazole",
+            "indomethacin",
+            "meropenem",
+            "methylprednisolone",
+            "metoclopramide",
+            "phosphate and magnesium salts when mixed directly"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "CeFAZolin",
+        "page": "https://win05178.github.io/nicu/CeFAZolin.html",
+        "incompatibility": [
+            "Amiodarone", 
+            "caspofungin", 
+            "cimetidine", 
+            "vancomycin"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Cefepime",
+        "page": "https://win05178.github.io/nicu/Cefepime.html",
+        "incompatibility": [
+            "Acyclovir", 
+            "Aminophylline", 
+            "Amphotericin B", 
+            "Cimetidine", 
+            "Diazepam", 
+            "Dobutamine", 
+            "Dopamine", 
+            "Enalaprilat", 
+            "Erythromycin lactobionate", 
+            "Famotidine", 
+            "Ganciclovir", 
+            "Magnesium sulfate", 
+            "Metoclopramide", 
+            "Midazolam", 
+            "Morphine", 
+            "Nicardipine", 
+            "Phenytoin", 
+            "Tobramycin", 
+            "Vancomycin"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Cefotaxime",
+        "page": "https://win05178.github.io/nicu/Cefotaxime.html",
+        "incompatibility": [
+            "Azithromycin", 
+            "Fluconazole", 
+            "Protamine sulfate", 
+            "Sodium bicarbonate", 
+            "Vancomycin"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "CefOXitin",
+        "page": "https://win05178.github.io/nicu/CefOXitin.html",
+        "incompatibility": [
+            "Azithromycin", 
+            "Fluconazole", 
+            "Protamine sulfate", 
+            "Sodium bicarbonate", 
+            "Vancomycin",
+            "Erythromycin lactobionate"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "CefTAZidime",
+        "page": "https://win05178.github.io/nicu/CefTAZidime.html",
+        "incompatibility": [
+            "Azithromycin", 
+            "Fluconazole", 
+            "Protamine sulfate", 
+            "Sodium bicarbonate", 
+            "Vancomycin",
+            "Erythromycin lactobionate"
         ]
     }
 ]

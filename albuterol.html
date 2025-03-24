@@ -5,6 +5,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </head>
     <style>
         .body,.card-body,.card {
@@ -146,7 +147,26 @@
                     </div>
                 </div>
             </div>
-           
+            <div class="card">
+                <div class="card-header" id="headingFour" style="background-color: #fffcc4;">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Preparation
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
+                    <div class="card-body">
+                        <div>
+                            <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i><span id="prepare1"></span>
+                        </div>
+                        <hr>
+                        <div>
+                            <i class="fas fa-pills" style="font-size: 2em;  margin: 10px auto; color: #A16AE8;"></i><span id="prepare2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-header" id="headingTwo" style="background-color: #fffcc4;">
                     <h2 class="mb-0">
@@ -192,40 +212,6 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="headingFour" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Preparation
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                Oral dosage form: Syrup, 2 mg/5 mL.
-                        <div>
-                            <br>
-                            <span id="prepare1"></span>
-                         </div>
-                        </li>
-                        <br>
-                        <li>
-                            Nebulization: 1 MG/ML; 2.5 ML
-                        <div>
-                            <br>
-                            <span id="prepare2"></span>
-                        </div>
-
-                        </li>
-                        </ul>
-                        <!-- Content for Preparation -->
-                         
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="card">
                 <div class="card-header" id="headingFive" style="background-color: #fffcc4;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -233,7 +219,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
                     <div class="card-body">
                         <!-- Content for Monitoring -->
                         Assess degree of bronchospasm. Continuous EKG monitoring. Consider not administering when heart rate is greater than 180 bpm. Serum potassium.
@@ -248,7 +234,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix">
                     <div class="card-body">
                         <!-- Content for Adverse effects -->
                         Tachycardia, arrhythmias, tremor, hypokalemia, and irritable behavior.
@@ -263,7 +249,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven">
                     <div class="card-body">
                         <!-- Content for Solution incompatibility -->
                         
@@ -278,7 +264,7 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight">
                     <div class="card-body">
                         <!-- Content for Drug incompatibility -->
                         
@@ -308,8 +294,8 @@
         </div>
 
         <script>
-            var prepare1 = "ปริมาณยาที่ใช้ 2 mg ในสารน้ำ 5 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> mg. X 5) ÷ 2 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
-            var prepare2 = "ปริมาณยาที่ใช้ 2.5 mg ในสารน้ำ 2.5 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> mg. X 2.5) ÷ 2.5 = <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
+            var prepare1 = "ปริมาณยาที่ใช้ 2 mg ในสารน้ำ 5 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> mg. X 5) ÷ 2 = <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
+            var prepare2 = "ปริมาณยาที่ใช้ 2.5 mg ในสารน้ำ 2.5 ml ปริมาณยาที่ใช้ <br> (<strong style='color: red;'>{c}</strong> mg. X 2.5) ÷ 2.5 = <strong style='font-size: 1.5em; color: red; border: 1px solid #ccc; background-color: white; padding: 5px; border-radius: 5px;'>{r}</strong> ml";
             // var finalA = "สูตร  <strong style='color: red;'>{c}</strong> mg.  ÷ 7 mg/ml  ต้องผสมสารน้ำไม่น้อยกว่า  <strong style='font-size: 1.5em; color: red;'>{r}</strong> ml";
 
             function formatNumber(num) {
