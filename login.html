@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Login Check</title>
+</head>
+<body>
+  <script>
+    (async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get('username');
+      const password = urlParams.get('password');
+
+      const jsonResponse = (obj) => {
+        const blob = new Blob([JSON.stringify(obj)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        window.location = url;
+      };
+
+      if (!username || !password) {
+        jsonResponse({ status: 'error', message: 'Missing username or password' });
+        return;
+      }
+      
+      const res = await fetch('https://docs.google.com/spreadsheets/d/1bfyFMDBFJWqGRmokBqHWz7LEU35zPtrl-4bz65wuBdg/gviz/tq?tqx=out:json');
+      const text = await res.text();
+      const json = JSON.parse(text.match(/(?<=\{).*(?=\})/s)[0]);
+      const rows = json.table.rows.map(r => ({
+        username: r.c[0]?.v,
+        password: r.c[1]?.v,
+        expiredate: r.c[2]?.v
+      }));
+
+      const userRow = rows.find(r => r.username === username && r.password === password);
+
+      if (!userRow) {
+        jsonResponse({ status: 'fail', message: 'Invalid username or password' });
+        return;
+      }
+
+      const today = new Date().toISOString().split('T')[0];
+      if (userRow.expiredate < today) {
+        jsonResponse({ status: 'fail', message: 'Account expired on ' + userRow.expiredate });
+      } else {
+        jsonResponse({ status: 'success', message: 'Login successful', expiredate: userRow.expiredate });
+      }
+    })();
+  </script>
+</body>
+</html>
